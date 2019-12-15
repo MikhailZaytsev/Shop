@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: silver;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Sale">
+    <children>
+        <Label layoutX="256.0" layoutY="14.0" text="Система учета товара" textFill="#1a6f1e">
+            <font>
+                <Font size="49.0" />
+            </font>
+        </Label>
+        <Label fx:id="person" layoutX="27.0" layoutY="104.0" textFill="#1a2275">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <Label fx:id="permission" layoutX="583.0" layoutY="104.0" textFill="#1a2275">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+      <TableView fx:id="sale" layoutX="14.0" layoutY="172.0" prefHeight="368.0" prefWidth="640.0">
+        <columns>
+          <TableColumn fx:id="productName" editable="false" prefWidth="241.0" resizable="false" text="Название" />
+            <TableColumn fx:id="productCount" editable="false" minWidth="0.0" prefWidth="114.0" resizable="false" text="Кол-во" />
+            <TableColumn fx:id="productPrice" editable="false" prefWidth="130.0" resizable="false" text="Цена" />
+            <TableColumn fx:id="productSumPrice" editable="false" prefWidth="154.0" resizable="false" text="Стоимость" />
+        </columns>
+      </TableView>
+      <TextField fx:id="id" layoutX="676.0" layoutY="172.0" prefHeight="51.0" prefWidth="307.0" promptText="ID товара">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Button fx:id="add" layoutX="676.0" layoutY="238.0" mnemonicParsing="false" text="добавить">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <TextField fx:id="count" layoutX="824.0" layoutY="238.0" prefHeight="51.0" prefWidth="159.0" promptText="количество">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Button fx:id="delete" layoutX="676.0" layoutY="469.0" mnemonicParsing="false" text="Удалить" textFill="#bf1414">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="pay" layoutX="835.0" layoutY="534.0" mnemonicParsing="false" text="Оплата">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Label fx:id="summary" layoutX="721.0" layoutY="542.0" text="Сумма">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="home" layoutX="514.0" layoutY="560.0" mnemonicParsing="false" text="выход">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="cancelPane" layoutX="661.0" layoutY="301.0" prefHeight="155.0" prefWidth="319.0" visible="false">
+         <children>
+            <Label layoutX="83.0" layoutY="14.0" text="Удалить товар?">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="yes" layoutX="29.0" layoutY="85.0" mnemonicParsing="false" text="да">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="no" layoutX="227.0" layoutY="85.0" mnemonicParsing="false" text="нет">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
